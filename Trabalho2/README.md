@@ -1,0 +1,1 @@
+Não foi feito o upload do arquivo 'cep.dat' pois o GitHub não permite o upload de arquivos com mais de 25MB.
