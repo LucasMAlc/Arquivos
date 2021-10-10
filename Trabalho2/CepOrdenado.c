@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <locale.h>
 
@@ -56,27 +57,27 @@ int main(int argc, char**argv) {
         free(e);
     }
 
-	FILE *arq1, *arq2, *arq3;
     int x = 1, y = 9;
+	FILE *arq1, *arq2, *arq3;
     Endereco e2, e3;
 
-    printf("--Concatenando--\n");
+    printf("--Intercalando arquivos--\n");
 
 	while (y < 16){
-		char aux1[200], aux2[200], concat[200];
+		char aux1[200], aux2[200], inter[200];
 
         sprintf(aux1,"cep_%d.dat",x++);
         sprintf(aux2,"cep_%d.dat",x++);
         if (y==15){
-			sprintf(concat,"CepOrdenado.dat", y++);
+			sprintf(inter,"CepOrdenado.dat", y++);
 		}
         else {
-			sprintf(concat,"cep%d.dat",y++);
+			sprintf(inter,"cep_%d.dat", y++);
 		}
 
         arq1 = fopen(aux1,"r");
         arq2 = fopen(aux2,"r");
-        arq3 = fopen(concat,"w");
+        arq3 = fopen(inter,"w");
 
         fread(&e2,sizeof(Endereco),1,arq1);
 	    fread(&e3,sizeof(Endereco),1,arq2);
@@ -106,5 +107,5 @@ int main(int argc, char**argv) {
 		fclose(arq2);
 		fclose(arq3);
     }
-    printf("Arquivo Ordenado com sucesso.\n");
+    printf("Arquivo ordenado com sucesso.\n");
 }
