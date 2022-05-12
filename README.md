@@ -1,2 +1,2 @@
 # Arquivos
- Códigos da disciplina Estrutura de Organização de Arquivos
+ Códigos da disciplina ORGANIZAÇÃO DE ESTRUTURAS DE ARQUIVOS 
